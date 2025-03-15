@@ -16,3 +16,67 @@ Deepseek does use Python... they are also open source.
 Objective: Look in Deepseek
 
 *Each calculator type needs to have a file. 
+
+Basic Arithmetic Functions
+
+    Addition: add(a, b)
+    Subtraction: subtract(a, b)
+    Multiplication: multiply(a, b)
+    Division: divide(a, b)
+
+Advanced Arithmetic Functions
+
+    Exponentiation: power(base, exponent)
+    Square Root: sqrt(x)
+    Factorial: factorial(n)
+
+Trigonometric Functions
+
+    Sine: sin(angle_in_radians)
+    Cosine: cos(angle_in_radians)
+    Tangent: tan(angle_in_radians)
+    Inverse Sine: asin(value)
+    Inverse Cosine: acos(value)
+    Inverse Tangent: atan(value)
+
+Hyperbolic Functions
+
+    Hyperbolic Sine: sinh(x)
+    Hyperbolic Cosine: cosh(x)
+    Hyperbolic Tangent: tanh(x)
+
+Logarithmic Functions
+
+    Natural Logarithm: ln(x)
+    Logarithm Base 10: log10(x)
+    Logarithm Base b: log(x, base)
+
+Constants
+
+    Pi: pi
+    Euler's Number: e
+
+Miscellaneous Functions
+
+    Degree to Radian Conversion: deg_to_rad(degrees)
+    Radian to Degree Conversion: rad_to_deg(radians)
+    Random Number Generation: random(min, max)
+
+Statistical Functions
+
+    Mean: mean(data)
+    Median: median(data)
+    Standard Deviation: std_dev(data)
+
+Matrix Operations (Optional)
+
+    Matrix Addition: matrix_add(matrix1, matrix2)
+    Matrix Multiplication: matrix_multiply(matrix1, matrix2)
+    Determinant: determinant(matrix)
+    Inverse of a Matrix: matrix_inverse(matrix)
+
+User Interface Functions
+
+    Display Menu: display_menu()
+    Get User Input: get_input()
+    Error Handling: handle_error()
