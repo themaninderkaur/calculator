@@ -1,27 +1,5 @@
 import math
 
-'''
-Add Ons
--------
--Basic Calc
--Calc Calc
--Discrete Math Calc
--Programming Calc
-
-Basic: add, subtract, etc.
-Calc: Derivitaves, integrals, limits, etc.
-Discrete: propositions, predicates
-Programming: convert between types
-
-Why not use AI? If you get an answer but need and explanations, the AI can do that for you maybe?
-OpenAi, Deepseek, etc. 
-Deepseek does use Python... they are also open source.
-Objective: Look in Deepseek
-
-Also have a more detailed list (.txt) in the folder that does teh work
-Each calculator type needs to have a file. 
-'''
-
 def add(x, y):
     return x + y
 
