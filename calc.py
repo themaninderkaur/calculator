@@ -22,6 +22,28 @@ def square_root(x):
 def power(x, y):
     return math.pow(x, y)
 
+def factorial(x):
+    return math.factorial(x)
+
+def sin(x):
+    return math.sin(x)
+
+def cos(x):
+    return math.cos(x)
+
+def tan(x):
+    return math.tan(x)
+
+def arcsin(x):
+    return math.asin(x)
+
+def arccos(x):
+    return math.acos(x)
+
+def arctan(x):
+    return math.atan(x)
+    
+
 def calculator():
     print("Welcome to the Python Calculator!")
     print("Select operation:")
