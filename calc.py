@@ -42,7 +42,24 @@ def arccos(x):
 
 def arctan(x):
     return math.atan(x)
-    
+
+def sinh(x):
+    return math.sinh(x)
+
+def cosh(x):
+    return math.cosh(x)
+
+def tanh(x):
+    return math.tanh(x)
+
+def arcsinh(x):
+    return math.asinh(x)
+
+def arccosh(x):
+    return math.acosh(x)
+
+def arctanh(x):
+    return math.atanh(x)
 
 def calculator():
     print("Welcome to the Python Calculator!")
