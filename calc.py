@@ -17,13 +17,16 @@ def divide(x, y):
 def square_root(x):
     if x < 0:
         return "Error! Cannot take the square root of a negative number."
-    return math.sqrt(x)
+    return x ** (1/2)
 
 def power(x, y):
-    return math.pow(x, y)
+    return x ** y
 
 def factorial(x):
-    return math.factorial(x)
+    if x == 0:
+        return 1
+    else:
+        return x * factorial(x - 1)
 
 def sin(x):
     return math.sin(x)
