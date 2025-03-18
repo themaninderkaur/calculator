@@ -22,30 +22,59 @@ def square_root(x):
 def power(x, y):
     return x ** y
 
-def factorial(x):
-    if x == 0:
+def factorial(n):
+    if n == 0 or n == 1:
         return 1
-    else:
-        return x * factorial(x - 1)
+    result = 1
+    for i in range(2, n + 1):
+        result *= i
+    return result
 
-def sin(x):
-    return math.sin(x)
+def sin(x, terms=10):
+    sine = 0
+    for n in range(terms):
+        sign = (-1) ** n
+        sine += sign * (x ** (2 * n + 1)) / factorial(2 * n + 1)
+    return sine
 
-def cos(x):
-    return math.cos(x)
+def factorial(n):
+    """Calculate the factorial of n (n!)."""
+    if n == 0 or n == 1:
+        return 1
+    result = 1
+    for i in range(2, n + 1):
+        result *= i
+    return result
 
-def tan(x):
-    return math.tan(x)
+def sin(x, terms=10):
+    sine = 0
+    for n in range(terms):
+        sign = (-1) ** n  # Alternating sign
+        sine += sign * (x ** (2 * n + 1)) / factorial(2 * n + 1)
+    return sine
+
+def cos(x, terms=10):
+    cosine = 0
+    for n in range(terms):
+        sign = (-1) ** n
+        cosine += sign * (x ** (2 * n)) / factorial(2 * n)
+    return cosine
+
+def tan(x, terms=10):
+    cosine_value = cos(x, terms)
+    if cosine_value == 0:
+        raise ValueError("Tangent is undefined for this value of x (cos(x) = 0).")
+    return sin(x, terms) / cosine_value
 
 def arcsin(x):
-    return math.asin(x)
+    return 1/sin(x)
 
 def arccos(x):
-    return math.acos(x)
+    return 1/cos(x)
 
 def arctan(x):
-    return math.atan(x)
-
+    return 1/tan(x)
+    
 def sinh(x):
     return math.sinh(x)
 
