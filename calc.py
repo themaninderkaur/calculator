@@ -66,15 +66,36 @@ def tan(x, terms=10):
         raise ValueError("Tangent is undefined for this value of x (cos(x) = 0).")
     return sin(x, terms) / cosine_value
 
-def arcsin(x):
-    return 1/sin(x)
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    result = 1
+    for i in range(2, n + 1):
+        result *= i
+    return result
 
-def arccos(x):
-    return 1/cos(x)
+def arcsin(x, terms=10):
+    if x < -1 or x > 1:
+        raise ValueError("Input must be in the range [-1, 1].")
+    arcsine = 0
+    for n in range(terms):
+        sign = (-1) ** n
+        arcsine += sign * (factorial(2 * n) * (x ** (2 * n + 1))) / (4 ** n * (factorial(n) ** 2) * (2 * n + 1))
+    return arcsine
 
-def arctan(x):
-    return 1/tan(x)
+def arccos(x, terms=10):
+    if x < -1 or x > 1:
+        raise ValueError("Input must be in the range [-1, 1].")
     
+    return (math.pi / 2) - arcsin(x, terms)
+
+def arctan(x, terms=10):
+    arctangent = 0
+    for n in range(terms):
+        sign = (-1) ** n
+        arctangent += sign * (x ** (2 * n + 1)) / (2 * n + 1)
+    return arctangent
+
 def sinh(x):
     return math.sinh(x)
 
