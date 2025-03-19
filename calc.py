@@ -19,8 +19,13 @@ def square_root(x):
         return "Error! Cannot take the square root of a negative number."
     return x ** (1/2)
 
-def power(x, y):
-    return x ** y
+def exp(x, terms=100):
+    result = 1.0
+    term = 1.0
+    for n in range(1, terms):
+        term *= x / n
+        result += term
+    return result
 
 def factorial(n):
     if n == 0 or n == 1:
@@ -65,14 +70,6 @@ def tan(x, terms=10):
     if cosine_value == 0:
         raise ValueError("Tangent is undefined for this value of x (cos(x) = 0).")
     return sin(x, terms) / cosine_value
-
-def factorial(n):
-    if n == 0 or n == 1:
-        return 1
-    result = 1
-    for i in range(2, n + 1):
-        result *= i
-    return result
 
 def arcsin(x, terms=10):
     if x < -1 or x > 1:
