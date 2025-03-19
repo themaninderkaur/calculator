@@ -27,6 +27,16 @@ def exp(x, terms=100):
         result += term
     return result
 
+def ln(x, terms=100):
+    if x <= 0:
+        raise ValueError("Input must be greater than 0.")
+    result = 0.0
+    y = (x - 1) / (x + 1)
+    y_squared = y * y
+    for n in range(1, terms):
+        result += (1 / (2 * n - 1)) * (y ** (2 * n - 1))
+    return 2 * result
+
 def factorial(n):
     if n == 0 or n == 1:
         return 1
@@ -41,15 +51,6 @@ def sin(x, terms=10):
         sign = (-1) ** n
         sine += sign * (x ** (2 * n + 1)) / factorial(2 * n + 1)
     return sine
-
-def factorial(n):
-    """Calculate the factorial of n (n!)."""
-    if n == 0 or n == 1:
-        return 1
-    result = 1
-    for i in range(2, n + 1):
-        result *= i
-    return result
 
 def sin(x, terms=10):
     sine = 0
@@ -94,13 +95,13 @@ def arctan(x, terms=10):
     return arctangent
 
 def sinh(x):
-    return math.sinh(x)
+    return (exp(x) - exp(-x)) / 2
 
 def cosh(x):
-    return math.cosh(x)
+    return (exp(x) + exp(-x)) / 2
 
 def tanh(x):
-    return math.tanh(x)
+    return sinh(x) / cosh(x)
 
 def arcsinh(x):
     return math.asinh(x)
