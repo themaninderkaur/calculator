@@ -104,13 +104,17 @@ def tanh(x):
     return sinh(x) / cosh(x)
 
 def arcsinh(x):
-    return math.asinh(x)
+    return ln(x + (x**2 + 1)**0.5)
 
 def arccosh(x):
-    return math.acosh(x)
+    if x < 1:
+        raise ValueError("Input must be greater than or equal to 1.")
+    return ln(x + (x**2 - 1)**0.5)
 
 def arctanh(x):
-    return math.atanh(x)
+    if x <= -1 or x >= 1:
+        raise ValueError("Input must be in the range (-1, 1).")
+    return 0.5 * ln((1 + x) / (1 - x))
 
 def calculator():
     print("Welcome to the Python Calculator!")
