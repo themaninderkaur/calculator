@@ -37,6 +37,31 @@ def ln(x, terms=100):
         result += (1 / (2 * n - 1)) * (y ** (2 * n - 1))
     return 2 * result
 
+def log10(x):
+    if x <= 0:
+        raise ValueError("Logarithm undefined for non-positive values.")
+    def natural_log(y):
+        if y <= 0:
+            raise ValueError("Natural logarithm undefined for non-positive values.")
+        z = (y - 1) / (y + 1)
+        z_squared = z * z
+        term = z
+        result = 0
+        n = 1
+        while True:
+            result += term / n
+            term *= z_squared
+            n += 2
+            if abs(term / n) < 1e-10:
+                break
+        return 2 * result
+    return natural_log(x) / natural_log(10)
+
+def log(x, base):
+    if x <= 0 or base <= 0 or base == 1:
+        raise ValueError("Logarithm undefined for non-positive values or base 1.")
+    return log10(x) / log10(base)
+    
 def factorial(n):
     if n == 0 or n == 1:
         return 1
