@@ -144,6 +144,9 @@ def arctanh(x):
 def deg_to_rad(degrees):
     return degrees * (3.141592653589793 / 180)
 
+def rad_to_deg(radians):
+    return radians * (180 / 3.141592653589793)
+
 def calculator():
     print("Welcome to the Python Calculator!")
     print("Select operation:")
