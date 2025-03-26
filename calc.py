@@ -147,6 +147,11 @@ def deg_to_rad(degrees):
 def rad_to_deg(radians):
     return radians * (180 / 3.141592653589793)
 
+def mean(data):
+    if len(data) == 0:
+        return 0
+    return sum(data) / len(data)
+
 def calculator():
     print("Welcome to the Python Calculator!")
     print("Select operation:")
