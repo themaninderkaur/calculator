@@ -141,6 +141,9 @@ def arctanh(x):
         raise ValueError("Input must be in the range (-1, 1).")
     return 0.5 * ln((1 + x) / (1 - x))
 
+def deg_to_rad(degrees):
+    return degrees * (3.141592653589793 / 180)
+
 def calculator():
     print("Welcome to the Python Calculator!")
     print("Select operation:")
