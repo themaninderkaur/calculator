@@ -163,6 +163,13 @@ def median(data):
     else:
         return sorted_data[mid]
 
+def std_dev(data):
+    if len(data) == 0:
+        return 0
+    mean_value = mean(data)
+    variance = sum((x - mean_value) ** 2 for x in data) / len(data)
+    return variance ** 0.5
+
 def calculator():
     print("Welcome to the Python Calculator!")
     print("Select operation:")
