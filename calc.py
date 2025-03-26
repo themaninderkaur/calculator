@@ -152,6 +152,17 @@ def mean(data):
         return 0
     return sum(data) / len(data)
 
+def median(data):
+    if len(data) == 0:
+        return 0
+    sorted_data = sorted(data)
+    n = len(sorted_data)
+    mid = n // 2
+    if n % 2 == 0:
+        return (sorted_data[mid - 1] + sorted_data[mid]) / 2
+    else:
+        return sorted_data[mid]
+
 def calculator():
     print("Welcome to the Python Calculator!")
     print("Select operation:")
