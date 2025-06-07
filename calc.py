@@ -36,6 +36,11 @@ def calculator():
 
     def absolute(x):
         return abs(x)
+
+    def gcd(x, y):
+        while y:
+            x, y = y, x % y
+        return x
     
     def ln(x, terms=100):
         if x <= 0:
