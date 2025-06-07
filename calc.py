@@ -28,6 +28,9 @@ def calculator():
             result += term
         return result
 
+    def power(x, y):
+        return x ** y
+    
     def ln(x, terms=100):
         if x <= 0:
             raise ValueError("Input must be greater than 0.")
