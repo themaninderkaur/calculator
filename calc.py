@@ -30,6 +30,9 @@ def calculator():
 
     def power(x, y):
         return x ** y
+
+    def mod(x, y):
+        return x % y
     
     def ln(x, terms=100):
         if x <= 0:
