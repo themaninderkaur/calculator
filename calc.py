@@ -173,12 +173,6 @@ def calculator():
         else:
             return sorted_data[mid]
 
-    def variance(data):
-        if len(data) == 0:
-            return 0
-        mean_value = mean(data)
-        return sum((x - mean_value) ** 2 for x in data) / len(data)
-
     def mode(data):
         if len(data) == 0:
             return 0
@@ -187,7 +181,13 @@ def calculator():
             frequency[value] = frequency.get(value, 0) + 1
         max_freq = max(frequency.values())
         modes = [key for key, value in frequency.items() if value == max_freq]
-        return modes if len(modes) > 1 else modes[0]
+        return modes if len(modes) > 1 else modes[0]    
+
+    def variance(data):
+        if len(data) == 0:
+            return 0
+        mean_value = mean(data)
+        return sum((x - mean_value) ** 2 for x in data) / len(data)
 
     def std_dev(data):
         if len(data) == 0:
