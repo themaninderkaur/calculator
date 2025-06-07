@@ -41,6 +41,9 @@ def calculator():
         while y:
             x, y = y, x % y
         return x
+
+    def lcm(x, y):
+        return abs(x * y) // gcd(x, y)
     
     def ln(x, terms=100):
         if x <= 0:
