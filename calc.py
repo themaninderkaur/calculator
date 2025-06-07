@@ -173,6 +173,13 @@ def calculator():
         else:
             return sorted_data[mid]
 
+    def variance(data):
+        if len(data) == 0:
+            return 0
+        mean_value = mean(data)
+        return sum((x - mean_value) ** 2 for x in data) / len(data)
+
+    
     def std_dev(data):
         if len(data) == 0:
             return 0
