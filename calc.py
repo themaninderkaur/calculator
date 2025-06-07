@@ -182,6 +182,10 @@ def calculator():
 
     def permutations(n, r):
         return factorial(n) // factorial(n - r)
+        
+    def combinations(n, r):
+        return factorial(n) // (factorial(r) * factorial(n - r))
+
 
     print("Welcome to the Python Calculator!")
     print("Select operation:")
