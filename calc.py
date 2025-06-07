@@ -180,6 +180,9 @@ def calculator():
         variance = sum((x - mean_value) ** 2 for x in data) / len(data)
         return variance ** 0.5
 
+    def permutations(n, r):
+        return factorial(n) // factorial(n - r)
+
     print("Welcome to the Python Calculator!")
     print("Select operation:")
     print("1. Add")
