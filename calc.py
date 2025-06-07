@@ -33,6 +33,9 @@ def calculator():
 
     def mod(x, y):
         return x % y
+
+    def absolute(x):
+        return abs(x)
     
     def ln(x, terms=100):
         if x <= 0:
