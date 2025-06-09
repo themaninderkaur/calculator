@@ -55,6 +55,12 @@ def calculator():
             result += (1 / (2 * n - 1)) * (y ** (2 * n - 1))
         return 2 * result
 
+    def log(x, base):
+        if x <= 0 or base <= 0 or base == 1:
+            raise ValueError("Logarithm undefined for non-positive values or base 1.")
+        return log10(x) / log10(base)
+
+    
     def log10(x):
         if x <= 0:
             raise ValueError("Logarithm undefined for non-positive values.")
@@ -74,11 +80,6 @@ def calculator():
                     break
             return 2 * result
         return natural_log(x) / natural_log(10)
-
-    def log(x, base):
-        if x <= 0 or base <= 0 or base == 1:
-            raise ValueError("Logarithm undefined for non-positive values or base 1.")
-        return log10(x) / log10(base)
 
     def factorial(n):
         if n == 0 or n == 1:
