@@ -15,11 +15,6 @@ def calculator():
             return "Error! Division by zero."
         return x / y
 
-    def square_root(x):
-        if x < 0:
-            return "Error! Cannot take the square root of a negative number."
-        return x ** (1/2)
-
     def exp(x, terms=100):
         result = 1.0
         term = 1.0
@@ -28,6 +23,11 @@ def calculator():
             result += term
         return result
 
+    def square_root(x):
+        if x < 0:
+            return "Error! Cannot take the square root of a negative number."
+        return x ** (1/2)
+    
     def power(x, y):
         return x ** y
 
